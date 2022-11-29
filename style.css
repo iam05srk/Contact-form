@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*
+{
+  font-family: Poppins, sans-serif;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+section 
+{
+  position: relative;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #3a054d;
+}
+
+section::before 
+{
+  content: "";
+  position: absolute;
+
+  inset: 0 0;
+  width: 50%;
+  min-height: 100vh;
+
+  background: #9d75a8;
+}
+section .container 
+{
+  position: relative;
+  min-width: 1100px;
+  min-height: 550px;
+
+  z-index: 1000;
+  display: flex;
+}
+section .container .contactinfo 
+{
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: #1a0633;
+  z-index: 1;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.904);
+}
+section .container .contactinfo h2 
+{
+  color: rgb(242, 161, 12);
+  font-size: 24px;
+  font-weight: 500;
+}
+section .container .contactinfo .info 
+{
+  position: relative;
+  margin: 20px 0;
+}
+section .container .contactinfo .info li 
+{
+  position: relative;
+  margin: 20px 0;
+  
+  display: flex;
+  align-items: flex-start;
+
+  cursor: pointer;
+  list-style: none;
+}
+
+section .container .contactinfo .info li span:nth-child(1) 
+{
+  width: 30px;
+  min-width: 30px;
+}
+section .container .contactinfo .info li span:nth-child(1) img 
+{
+  width: 100%;
+
+  filter: invert(1);
+  opacity: 0.5;
+}
+section .container .contactinfo .info li span:nth-child(2) 
+{
+  font-weight: 300;
+  color: white;
+  opacity: 0.5;
+
+  margin-left: 10px;
+}
+section .container .contactinfo .info li:hover span:nth-child(1) img,
+section .container .contactinfo .info li:hover span:nth-child(2) 
+{
+  opacity: 1;
+}
+section .container .contactinfo .sci 
+{
+  display: flex;
+  position: relative;
+  align-self: center;
+}
+section .container .contactinfo .sci li 
+{
+  list-style: none;
+  margin: 0 8px;
+}
+section .container .contactinfo .sci li a 
+{
+  text-decoration: none;
+}
+section .container .contactinfo .sci li a img 
+{
+  width: 30px;
+
+  filter: invert(1);
+  opacity: 0.5;
+}
+section .container .contactinfo .sci li:hover a img 
+{
+  opacity: 1;
+}
+section .container .contactForm 
+{
+  position: absolute;
+  padding: 70px 50px;
+  margin-left: 150px;
+  padding-left: 250px;
+  width: calc(100% - 150px);
+  height: 100%;
+
+  background: white;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.978);
+}
+section .container .contactForm h2 
+{
+  font-weight: 300;
+  font-size: 24px;
+  color: #1a0633;
+}
+section .container .contactForm .formBox 
+{
+  position: relative;
+  padding-top: 30px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section .container .contactForm .formBox .inputBox 
+{
+  position: relative;
+  margin-bottom: 35px;
+}
+section .container .contactForm .formBox .inputBox.w50 
+{
+  width: 47%;
+}
+section .container .contactForm .formBox .inputBox.w100 
+{
+  width: 100%;
+}
+section .container .contactForm .formBox .inputBox input 
+{
+  width: 100%;
+  padding: 5px 0;
+}
+section .container .contactForm .formBox .inputBox input,
+section .container .contactForm .formBox .inputBox textarea 
+{
+  width: 100% !important;
+  color: #333;
+
+  font-size: 18px;
+  font-weight: 300;
+
+  padding: 5px;
+
+  border: none;
+  border-bottom: 1px solid #777;
+  outline: none;
+  resize: none;
+}
+section .container .contactForm .formBox .inputBox textarea 
+{
+  min-height: 120px;
+}
+section .container .contactForm .formBox .inputBox span 
+{
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 5px;
+  color: #333;
+
+  transition: 0.3s;
+  pointer-events: none;
+  opacity: 0.5;
+}
+section .container .contactForm .formBox .inputBox textarea:focus ~ span,
+section .container .contactForm .formBox .inputBox input:focus ~ span,
+section .container .contactForm .formBox .inputBox textarea:valid ~ span,
+section .container .contactForm .formBox .inputBox input:valid ~ span 
+{
+  transform: translateY(-20px);
+  font-size: 15px;
+  font-weight: 300;
+  color: #ff568c;
+  letter-spacing: 1px;
+  opacity: 1;
+}
+section .container .contactForm .formBox .inputBox input[type="submit"] 
+{
+  position: relative;
+  max-width: 150px;
+  padding: 12px;
+  border: none;
+
+  cursor: pointer;
+  background: #3a054d;
+  color: white;
+  
+}
+section .container .contactForm .formBox .inputBox input[type="submit"]:hover 
+{
+  background: #ff568c;
+}
+@media (max-width: 1200px) {
+  section .container {
+    width: 90%;
+    min-width: auto;
+    margin: 20px;
+
+    box-shadow: 0 20px 50px rgb(0, 0, 0, 0.2);
+  }
+  section .container .contactinfo {
+    position: relative;
+    top: 0;
+    height: 550px;
+  }
+  section .container .contactForm {
+    position: relative;
+    width: calc(100% - 350px);
+    margin-left: 0;
+    padding-left: 40px;
+    height: 550px;
+  }
+}
+@media (max-width: 990px) {
+  section {
+    background-color: #3a054d;
+  }
+  section::before {
+    display: none;
+  }
+  section .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  section .container .contactinfo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  section .container .contactForm {
+    width: 100%;
+    height: auto;
+  }
+  section .container .contactinfo .sci {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  section .container .contactinfo {
+    padding: 25px;
+    
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  section .container .contactForm {
+    padding: 25px;
+  }
+  section .container .contactinfo .sci {
+    margin-top: 40px;
+  }
+  section .container .contactForm .formBox .inputBox.w50 {
+    width: 100%;
+  }
+}
